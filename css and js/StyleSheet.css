@@ -78,10 +78,22 @@ WRAPPER-1 CONTENT CSS                                                           
 }
 .wrapper-1 {
     display: grid;
-    margin: 2.5rem 3%;
+    margin: 1rem 3%;
     grid-template-columns: 60% 40%;
     grid-gap: 1.5rem;
     grid-auto-rows: minmax(100px auto);
+}
+.wrapper-1-title {
+    margin: 0px;
+    font-family: 'Antonio';
+    font-size: 28px;
+}
+.wrapper-1-title a {
+    text-decoration: none;
+    color: black;
+}
+.wrapper-1-title :hover {
+    color: #949494;
 }
 .main-articles {
     background-color: #e0e0e0;
