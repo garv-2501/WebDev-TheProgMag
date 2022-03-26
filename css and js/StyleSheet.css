@@ -247,7 +247,7 @@ WRAPPER-1 CONTENT CSS                                                           
 }
 .wrapper-2-title {
     margin: 0px;
-    font-family: 'Antonio';
+    font-family: 'Antonio', sans-serif;
     font-size: 28px;
 }
 .wrapper-2-title a {
@@ -266,6 +266,68 @@ WRAPPER-1 CONTENT CSS                                                           
 }
 .subhead-2 {
     margin: 0.5rem;
+}
+
+/*FOOTER -----------------------*/
+
+.footer{
+	background-color: #eeeeee;
+    margin: 6rem 0 0 0;
+    padding: 3rem 0;
+}
+.container{
+	max-width: 1170px;
+	margin:auto;
+}
+.footerRow{
+	display: flex;
+	flex-wrap: wrap;
+}
+.footerColumn{
+    width: 25%;
+    padding: 0 15px;
+ }
+ul{
+	list-style: none;
+}
+
+
+.footerColumn h4{
+	font-size: 20px;
+	color: #000000;
+	text-transform: capitalize;
+	margin-bottom: 35px;
+	font-weight: 500;
+    font-family: 'Antonio', sans-serif;
+	position: relative;
+}
+.footerColumn h4::before{
+	content: '';
+	position: absolute;
+	left:0;
+	bottom: -10px;
+	background-color: #0a68ff;
+	height: 2px;
+	box-sizing: border-box;
+	width: 50px;
+}
+.footerColumn ul li:not(:last-child){
+	margin-bottom: 10px;
+}
+.footerColumn ul li a{
+	font-size: 18px;
+	text-transform: capitalize;
+	color: #141414;
+	text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+	font-weight: 300;
+	color: #545454;
+	display: block;
+	transition: all 0.3s ease;
+}
+.footerColumn ul li a:hover{
+	color: #000000;
+	padding-left: 8px;
 }
 
 
@@ -348,6 +410,12 @@ RESPONSIVE CSS: TABLET MODE                                         #
         grid-gap: 0rem;
     }
 
+    /*FOOTER CSS -------------------------------------*/
+    .footerColumn{
+        width: 50%;
+        margin-bottom: 30px;
+    }
+
 }
 
 /*
@@ -395,4 +463,17 @@ RESPONSIVE CSS: SMARTPHONE MODE                                          #
         font-size: 16px;
     }
 
+    /*WRAPPER-2 CSS ------------------------------------------------*/
+    .wrapper-2 {
+        display: grid;
+        margin: 1rem 3%;
+        grid-template-columns: auto;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-gap: 0rem;
+    }
+
+    /*FOOTER CSS -------------------------------------*/
+    .footerColumn{
+        width: 100%;
+    }
 }
