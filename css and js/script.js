@@ -1,12 +1,18 @@
 //NAVIGATION BAR TOGGLE BUTTON
+//Creating a navigation toggle button for
+//a responsive website
 const toggleButton = document.getElementsByClassName("toggle-button")[0];
 const navbarLinks = document.getElementsByClassName("navigation-bar-links")[0];
 
+//Reveal navigation by clicking the toggle button
 toggleButton.addEventListener("click", () => {
   navbarLinks.classList.toggle("active");
 });
 
-//NEWSLETTER POP-UP
+//------------------------------
+
+//NEWSLETTER SUBSCRIPTION POP-UP
+//Inspired by coding snow
 const popup_screen = document.querySelector(".popup-screen");
 const popup_box = document.querySelector(".popup-box");
 const closeBtn = document.querySelector(".close-btn");
@@ -31,3 +37,25 @@ if (WebsiteCookie != -1) {
 } else {
   popup_screen.style.display = "flex"; //Show popup screen
 }
+
+//--------------------------------
+
+//BACK TO TOP ICON CODE
+jQuery("#backtotop").click(function () {
+  //This scrolls to top after clicking the button
+  jQuery("body,html").animate(
+    {
+      scrollTop: 0,
+    },
+    600
+  );
+});
+
+jQuery(window).scroll(function () {
+  //Only makes scroll button visible after some scrolling
+  if (jQuery(window).scrollTop() > 150) {
+    jQuery("#backtotop").addClass("visible");
+  } else {
+    jQuery("#backtotop").removeClass("visible");
+  }
+});
