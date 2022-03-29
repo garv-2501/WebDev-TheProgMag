@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
   <head>
-    <title>TheProgMag - Home | Your tech magazine</title>
+    <title>TheProgMag - Game Development | Your tech magazine</title>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta
@@ -21,7 +21,8 @@
       href="https://fonts.googleapis.com/css2?family=Antonio:wght@500&family=Poppins:wght@500&display=swap"
       rel="stylesheet"
     />
-    <link href="css and js/StyleSheet.css" rel="stylesheet" media="screen" />
+    <link href="css and js/style.css" rel="stylesheet" media="screen" />
+    <link href="css and js/addedFeatures.css" rel="stylesheet" media="screen" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
@@ -29,13 +30,27 @@
     <link rel="icon" type="image/x-icon" href="/images/logo_1.png" />
   </head>
   <body>
+    <!--Popup screen asking for newsletter subscription-->
+    <!-- Only asks for Subscription one time -->
+    <div class="popup-screen">
+      <div class="popup-box">
+        <i class="fas fa-times close-btn"></i>
+        <h2>Subscribe to newsletter!</h2>
+        <p>
+          By clicking the button below, you can subscrible to our amazing weekly
+          newsletter for free! hurry up!
+        </p>
+        <a href="#" class="btn">Subscribe</a>
+      </div>
+    </div>
+
     <!--
-            #########################################################################
-            SUMMARY OF THE HEADER BELOW: A navigation bar                           #
-            # navigation-bar: used to create a navigation bar for the normal view   #
-            # toggle-button: used for smaller sized displays, uses javascript       #
-            # navigation-bar-links: main links to other pages                       #
-            #########################################################################
+    #########################################################################
+    SUMMARY OF THE HEADER BELOW: A navigation bar
+    # navigation-bar: used to create a navigation bar for the normal view
+    # toggle-button: used for smaller sized displays, uses javascript
+    # navigation-bar-links: main links to other pages
+    #########################################################################
     -->
     <header>
       <nav class="navigation-bar">
@@ -70,14 +85,14 @@
     <hr class="divider" />
 
     <!--
-            ###################################################################################
-            SUMMARY OF THE MAIN CODE: The main content of the page                            #
-            # main: Everything except the navigation bar and the footer                       #
-            # wrapper-1: the first half of the articles (total 2 parts above and below)       #
-            # main-articles: part of the wrapper-1, left articles                             #
-            # latest-articles-all: part of the wrapper-1, the right articles                  #
-            # wrapper-2: below wrapper-1, a taste of all the sub topics like WebDev, AI, etc  #
-            ###################################################################################
+    ###################################################################################
+    SUMMARY OF THE MAIN CODE: The main content of the page
+    # main: Everything except the navigation bar and the footer
+    # wrapper-1: the first half of the articles (total 2 parts above and below)
+    # main-articles: part of the wrapper-1, left articles
+    # latest-articles-all: part of the wrapper-1, the right articles
+    # wrapper-2: below wrapper-1, a taste of all the sub topics like WebDev, AI, etc
+    ###################################################################################
     -->
 
     <div class="main">
@@ -86,7 +101,9 @@
           <a href="gameDev.html">Game Development</a>
         </h2>
         <br />
+        <!-- Articles on the left -->
         <div class="main-articles">
+          <!-- The headline article on the left -->
           <article class="headline">
             <div class="headline-image">
               <a href=""
@@ -108,7 +125,292 @@
             </div>
           </article>
 
+          <!-- Smaller articles on the left below headline -->
           <div class="sub-headlines">
+            <!-- First article -->
+            <article class="subhead">
+              <div class="subhead-img">
+                <a href="#"
+                  ><img
+                    src="/images/article_images/gameDev/main1.jpg"
+                    alt="article img"
+                    width="100%"
+                /></a>
+              </div>
+              <div class="subhead-author">
+                <a href="#">Angel Scarlet</a>
+              </div>
+              <div class="subhead-title">
+                <a href="#"
+                  >Web 3 Game Development Platform Joyride Raises $14M Ahead of
+                  Launch</a
+                >
+                <hr class="divider" />
+              </div>
+            </article>
+
+            <!-- Second article -->
+            <article class="subhead">
+              <div class="subhead-img">
+                <a href="#"
+                  ><img
+                    src="/images/article_images/gameDev/main2.jpg"
+                    alt="article img"
+                    width="100%"
+                /></a>
+              </div>
+              <div class="subhead-author">
+                <a href="#">James Walton</a>
+              </div>
+              <div class="subhead-title">
+                <a href="#"
+                  >How Ubisoft Scalar aims to push the boundaries of game
+                  development</a
+                >
+                <hr class="divider" />
+              </div>
+            </article>
+
+            <!-- Third article -->
+            <article class="subhead">
+              <div class="subhead-img">
+                <a href="#"
+                  ><img
+                    src="/images/article_images/gameDev/main3.jpg"
+                    alt="article img"
+                    width="100%"
+                /></a>
+              </div>
+              <div class="subhead-author">
+                <a href="#">Drake Tonmor</a>
+              </div>
+              <div class="subhead-title">
+                <a href="#"
+                  >Mobile game developer LILA Games raises $10mn in series A
+                  funding round</a
+                >
+                <hr class="divider" />
+              </div>
+            </article>
+
+            <!-- Fourth article -->
+            <article class="subhead">
+              <div class="subhead-img">
+                <a href="#"
+                  ><img
+                    src="/images/article_images/gameDev/main4.jpg"
+                    alt="article img"
+                    width="100%"
+                /></a>
+              </div>
+              <div class="subhead-author">
+                <a href="#">Edward Alphonse</a>
+              </div>
+              <div class="subhead-title">
+                <a href="#"
+                  >NetEase will highlight its R&D capabilities in Game ...</a
+                >
+                <hr class="divider" />
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <!-- Articles on the right -->
+        <div class="latest-articles-all">
+          <h4 class="latest-articles-all-title">Latest articles</h4>
+          <!-- First article -->
+          <article class="latest-article">
+            <div class="latest-article-img">
+              <a href="#"
+                ><img
+                  src="/images/article_images/gameDev/square1.jpg"
+                  alt="article img"
+                  width="100%"
+              /></a>
+            </div>
+            <div class="latest-article-text">
+              <div class="latest-article-author">
+                <a href="#">Amet Consectetur</a>
+              </div>
+              <div class="latest-article-title">
+                <a href="#"
+                  >Fortnite Chapter 3: Season 2 update: Doctor Strange and new
+                  tanks</a
+                >
+              </div>
+            </div>
+            <div class="latest-article-divider">
+              <hr />
+            </div>
+          </article>
+
+          <!-- Second article -->
+          <article class="latest-article">
+            <div class="latest-article-img">
+              <a href="#"
+                ><img
+                  src="/images/article_images/gameDev/square2.jpg"
+                  alt="article img"
+                  width="100%"
+              /></a>
+            </div>
+            <div class="latest-article-text">
+              <div class="latest-article-author">
+                <a href="#">Boby Mathew</a>
+              </div>
+              <div class="latest-article-title">
+                <a href="#"
+                  >Babylon's Fall has "no plans to reduce the scale of
+                  development"</a
+                >
+              </div>
+            </div>
+            <div class="latest-article-divider">
+              <hr />
+            </div>
+          </article>
+
+          <!-- Third article -->
+          <article class="latest-article">
+            <div class="latest-article-img">
+              <a href="#"
+                ><img
+                  src="/images/article_images/gameDev/square3.jpg"
+                  alt="article img"
+                  width="100%"
+              /></a>
+            </div>
+            <div class="latest-article-text">
+              <div class="latest-article-author">
+                <a href="#">Luke Tyran</a>
+              </div>
+              <div class="latest-article-title">
+                <a href="#"
+                  >Dorian’s no-code, interactive storytelling app turns fiction
+                  writers into game developers</a
+                >
+              </div>
+            </div>
+            <div class="latest-article-divider">
+              <hr />
+            </div>
+          </article>
+
+          <!-- Fourth article -->
+          <article class="latest-article">
+            <div class="latest-article-img">
+              <a href="#"
+                ><img
+                  src="/images/article_images/gameDev/square4.jpg"
+                  alt="article img"
+                  width="100%"
+              /></a>
+            </div>
+            <div class="latest-article-text">
+              <div class="latest-article-author">
+                <a href="#">Smith Uchiha</a>
+              </div>
+              <div class="latest-article-title">
+                <a href="#"
+                  >Kiwi gaming company partners with major social media
+                  platform</a
+                >
+              </div>
+            </div>
+            <div class="latest-article-divider">
+              <hr />
+            </div>
+          </article>
+
+          <!-- Fifth article -->
+          <article class="latest-article">
+            <div class="latest-article-img">
+              <a href="#"
+                ><img
+                  src="/images/article_images/gameDev/square5.jpg"
+                  alt="article img"
+                  width="100%"
+              /></a>
+            </div>
+            <div class="latest-article-text">
+              <div class="latest-article-author">
+                <a href="#">Zebek None</a>
+              </div>
+              <div class="latest-article-title">
+                <a href="#">Game Developers Flying Flag For Wales</a>
+              </div>
+            </div>
+            <div class="latest-article-divider">
+              <hr />
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <!--
+    ###########################################################################
+    SUMMARY OF THE FOOTER CODE: The footer of the page
+    # Contains 4 columns: The Prog Mag, Contact, Articles, Follow Us
+    # Articles contains secondary links to other main pages: Web dev, ai, etc.
+    ###########################################################################
+    -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footerRow">
+          <div class="footerColumn">
+            <!-- First column of the footer -->
+            <h4>The Prog Mag</h4>
+            <ul>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Our Services</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+            </ul>
+          </div>
+          <div class="footerColumn">
+            <!-- Second column of the footer -->
+            <h4>Contact</h4>
+            <ul>
+              <li><a href="#">Phone No.</a></li>
+              <li><a href="#">Email</a></li>
+              <li><a href="#">FAQ</a></li>
+            </ul>
+          </div>
+          <div class="footerColumn">
+            <!-- Third column of the footer -->
+            <h4>Articles</h4>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="webDev.html">Web Dev</a></li>
+              <li><a href="ai.html">AI & ML</a></li>
+              <li><a href="gameDev.html">Game Dev</a></li>
+              <li><a href="appDev.html">App Dev</a></li>
+            </ul>
+          </div>
+          <div class="footerColumn">
+            <!-- Fourth column of the footer -->
+            <h4>Follow Us</h4>
+            <ul>
+              <li><a href="#">Twitter</a></li>
+              <li><a href="#">Instagram</a></li>
+              <li><a href="#">Github</a></li>
+              <li><a href="#">Linkedin</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Back to top button on bottom right -->
+    <a id="backtotop"><i class="fa fa-chevron-up"></i></a>
+
+    <!-- Links to JavaScript files -->
+    <script src="css and js/script.js" defer></script>
+    <script src="css and js/jquery.js"></script>
+  </body>
+</html>
+ -->
             <article class="subhead">
               <div class="subhead-img">
                 <a href="#"
@@ -194,6 +496,7 @@
           </div>
         </div>
 
+        <!-- Articles on the right -->
         <div class="latest-articles-all">
           <h4 class="latest-articles-all-title">Latest articles</h4>
           <article class="latest-article">
@@ -321,10 +624,18 @@
       </div>
     </div>
 
+    <!--
+    ###########################################################################
+    SUMMARY OF THE FOOTER CODE: The footer of the page
+    # Contains 4 columns: The Prog Mag, Contact, Articles, Follow Us
+    # Articles contains secondary links to other main pages: Web dev, ai, etc.
+    ###########################################################################
+    -->
     <footer class="footer">
       <div class="container">
         <div class="footerRow">
           <div class="footerColumn">
+            <!-- First column of the footer -->
             <h4>The Prog Mag</h4>
             <ul>
               <li><a href="#">About Us</a></li>
@@ -333,6 +644,7 @@
             </ul>
           </div>
           <div class="footerColumn">
+            <!-- Second column of the footer -->
             <h4>Contact</h4>
             <ul>
               <li><a href="#">Phone No.</a></li>
@@ -341,6 +653,7 @@
             </ul>
           </div>
           <div class="footerColumn">
+            <!-- Third column of the footer -->
             <h4>Articles</h4>
             <ul>
               <li><a href="index.html">Home</a></li>
@@ -351,6 +664,7 @@
             </ul>
           </div>
           <div class="footerColumn">
+            <!-- Fourth column of the footer -->
             <h4>Follow Us</h4>
             <ul>
               <li><a href="#">Twitter</a></li>
@@ -362,5 +676,12 @@
         </div>
       </div>
     </footer>
+
+    <!-- Back to top button on bottom right -->
+    <a id="backtotop"><i class="fa fa-chevron-up"></i></a>
+
+    <!-- Links to JavaScript files -->
+    <script src="css and js/script.js" defer></script>
+    <script src="css and js/jquery.js"></script>
   </body>
 </html>

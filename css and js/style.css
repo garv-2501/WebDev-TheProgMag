@@ -8,30 +8,36 @@ body {
   margin: 0;
   padding: 0;
   min-height: 100vh;
+  justify-content: center;
+  align-items: center;
 }
 
 /*
-#####################################################################
-NAVIGATION BAR CSS                                                  #
-# uses flexbox                                                      #
-# has all the CSS for navBar lists and hover effects, etc           #
-# has all the CSS for toggle-button                                 #     # 
-#####################################################################
+##########################################################
+NAVIGATION BAR CSS
+# uses flexbox
+# has all the CSS for navBar lists and hover effects, etc
+# has all the CSS for toggle-button
+##########################################################
 */
 .navigation-bar {
+  /* using flexbox on the navigation bar and adding other styles */
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 0rem 8%;
 }
 .navigation-bar-links ul {
+  /* Seperating the logo from other links */
   margin-left: 5rem;
   display: flex;
 }
 .navigation-bar-links li {
+  /* Better asthetics, removing any pre-assigned styles */
   list-style: none;
 }
 .navigation-bar-links li a {
+  /* Making navbar links look better */
   color: black;
   font-size: larger;
   font-family: "Antonio", sans-serif;
@@ -40,9 +46,12 @@ NAVIGATION BAR CSS                                                  #
   padding-right: 2rem;
 }
 .navigation-bar-links li a:hover {
+  /* Navbar links hover effect: change color */
   color: #949494;
 }
 .toggle-button {
+  /* Adding styles to the toggle button */
+  /* Adding display to none so that it's not visible unless prompted */
   position: absolute;
   top: 0.75rem;
   right: 1rem;
@@ -61,154 +70,45 @@ NAVIGATION BAR CSS                                                  #
   border-radius: 10px;
 }
 hr.divider {
+  /* Making a custom better looking divider */
   border: none;
   height: 1px;
   background: #dddddd;
 }
 
 /*
-#####################################################################
-Newsletter subscription                                             #
-#
-#####################################################################
+##############################################################################
+WRAPPER-1 CONTENT CSS
+# Contains CSS for Layer 1 elements: wrapper-1, main-articles, latest-articles
+# Contains CSS for Layer 2 elements: elements in main and latest articles 
+  (article title, author and img)
+##############################################################################
 */
 
-.popup-screen {
-  z-index: 999999;
-  position: fixed;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  visibility: hidden;
-  transition: 0.5s ease;
-  transition-property: visibility;
+/* Layer 1 elements */
+.main {
+  /* Giving the main section a CSS grid layout */
+  /* Will make it easy to adding a wrapper-2 in future if more content is needed */
+  display: grid;
+  grid-template-rows: auto auto;
+  max-width: 1440px;
+  margin: auto;
 }
-
-.popup-screen.active {
-  visibility: visible;
-}
-
-.popup-box {
-  position: relative;
-  background: rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(10px);
-  max-width: 350px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  margin: 20px;
-  padding: 50px 40px;
-  border-radius: 20px;
-  box-shadow: 0 5px 25px rgb(0 0 0 / 20%);
-  transform: scale(0);
-  transition: 0.5s ease;
-  transition-property: transform;
-}
-
-.popup-screen.active .popup-box {
-  transform: scale(1);
-}
-
-.popup-box h2 {
-  font-size: 2.1em;
-  font-family: "Antonio", sans-serif;
-  font-weight: 800;
-  margin-bottom: 20px;
-}
-
-.popup-box p {
-  font-size: 1em;
-  font-family: "Poppins", sans-serif;
-  margin-bottom: 30px;
-}
-
-.popup-box .btn {
-  color: #fff;
-  background: red;
-  font-size: 1.1em;
-  font-family: "Poppins", sans-serif;
-  font-weight: 500;
-  text-decoration: none;
-  text-transform: uppercase;
-  padding: 7px 27px;
-  border-radius: 3px;
-}
-
-.close-btn {
-  position: absolute;
-  font-size: 1em;
-  top: 0;
-  right: 0;
-  margin: 15px;
-  cursor: pointer;
-  opacity: 0.5;
-  transition: 0.3s ease;
-  transition-property: opacity;
-}
-
-.close-btn:hover {
-  opacity: 1;
-}
-
-/*back to top code -------------------------*/
-/*back to top CSS*/
-
-#backtotop {
-  z-index: 999;
-  display: inline-block;
-  position: fixed;
-  visibility: hidden;
-  bottom: 20px;
-  right: 20px;
-  width: 36px;
-  height: 36px;
-  line-height: 36px;
-  font-size: 16px;
-  text-align: center;
-  opacity: 0.2;
-}
-
-#backtotop i {
-  display: block;
-  width: 100%;
-  height: 100%;
-  line-height: inherit;
-}
-
-#backtotop.visible {
-  visibility: visible;
-  opacity: 0.5;
-  background: #b8b8b8;
-}
-
-#backtotop:hover {
-  opacity: 1;
-  background: #676767;
-}
-
-/*
-#####################################################################################
-WRAPPER-1 CONTENT CSS                                                               #
-# Contains CSS for Layer 1 elements: wrapper-1, main-articles, latest-articles      #
-# Contains CSS for Layer 2 elements: elements in main and latest articles           #
-#####################################################################################
-*/
 .wrapper-1 > div {
+  /* Providing a padding of 1rem to each div of wrapper-1 */
   padding: 1rem;
 }
 .wrapper-1 {
+  /* Giving the wrapper-1 section a CSS grid layout */
+  /* Initializing the rows and columns for the grid and adding other styles */
   display: grid;
-  margin: 1rem 3%;
+  margin: 1rem;
   grid-template-columns: 60% 40%;
   grid-gap: 1.5rem;
   grid-auto-rows: minmax(100px auto);
 }
 .wrapper-1-title {
+  /* CSS for the main title of the page */
   margin: 0px;
   font-family: "Antonio", sans-serif;
   font-size: 34px;
@@ -221,13 +121,17 @@ WRAPPER-1 CONTENT CSS                                                           
   color: #949494;
 }
 .main-articles {
+  /* Giving the main-articles section a CSS grid layout */
+  /* Giving a background color and defining the layout of rows in the section */
   background-color: #e0e0e0;
   display: grid;
   grid-auto-rows: minmax(200px, auto);
   grid-gap: 1.5rem;
 }
-/*----------------------------------------------------------*/
+
+/* Layer 2 elements: CSS for elements inside articles */
 .headline-image {
+  /* CSS for headline image styling */
   overflow: hidden;
 }
 .headline-image img {
@@ -237,6 +141,7 @@ WRAPPER-1 CONTENT CSS                                                           
   transform: scale(1.1);
 }
 .headline-author {
+  /* CSS for headline author text */
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-size: 20px;
 }
@@ -248,6 +153,7 @@ WRAPPER-1 CONTENT CSS                                                           
   color: #949494;
 }
 .headline-title {
+  /* CSS for headline title text */
   font-size: 45px;
   font-family: "Antonio", sans-serif;
   font-weight: 700;
@@ -259,15 +165,19 @@ WRAPPER-1 CONTENT CSS                                                           
 .headline-title:hover a {
   color: #949494;
 }
-/*-----------------------------------------------------------*/
+
+/*Subhead articles----------------------------------------------*/
 
 .sub-headlines {
+  /* Giving the main-articles section a CSS grid layout */
+  /* Defining rows and columns for the grid and adding a gap between grids */
   display: grid;
   grid-gap: 2rem;
   grid-template-columns: 1fr 1fr;
   grid-auto-rows: minmax(300px, auto);
 }
 .subhead-img {
+  /* CSS for images in subhead */
   overflow: hidden;
 }
 .subhead-img img {
@@ -277,6 +187,7 @@ WRAPPER-1 CONTENT CSS                                                           
   transform: scale(1.1);
 }
 .subhead-author {
+  /* CSS for author text in subhead */
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-size: 18px;
 }
@@ -288,6 +199,7 @@ WRAPPER-1 CONTENT CSS                                                           
   color: #949494;
 }
 .subhead-title {
+  /* CSS for title text in subhead */
   font-size: 28px;
   font-family: "Antonio", sans-serif;
   font-weight: 700;
@@ -299,24 +211,31 @@ WRAPPER-1 CONTENT CSS                                                           
 .subhead-title:hover a {
   color: #949494;
 }
-/*------------------------------------------------------------*/
+
+/*Latest articles-----------------------------------------------*/
+
 .latest-articles-all {
+  /* Giving the main-articles section a CSS grid layout */
+  /* Defining rows for the grid, adding other styles */
   background-color: #e0e0e0;
   display: grid;
   grid-gap: 1.5rem;
   grid-auto-rows: auto;
 }
 .latest-articles-all-title {
+  /* CSS for the main title of latest articles */
   font-family: "Antonio", sans-serif;
   font-size: 30px;
 }
 .latest-article {
+  /* Giving a grid layout to each article of the section */
   display: grid;
   grid-gap: 1rem;
   grid-auto-columns: 100, auto;
   grid-auto-rows: auto auto;
 }
 .latest-article-img {
+  /* CSS for images in latest articles */
   overflow: hidden;
 }
 .latest-article-img img {
@@ -326,6 +245,7 @@ WRAPPER-1 CONTENT CSS                                                           
   transform: scale(1.1);
 }
 .latest-article-author {
+  /* CSS for author text */
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-size: 16px;
 }
@@ -337,6 +257,7 @@ WRAPPER-1 CONTENT CSS                                                           
   color: #949494;
 }
 .latest-article-title {
+  /* CSS for title text */
   font-size: 20px;
   font-family: "Poppins", sans-serif;
   font-weight: 700;
@@ -355,54 +276,24 @@ WRAPPER-1 CONTENT CSS                                                           
 .latest-article-divider hr {
   border: none;
   height: 1px;
-  background-color: #c9c9c9;
-}
-
-/* WRAPPER 2 CONTENT*/
-.wrapper-2 > div {
-  padding: 1rem;
-}
-.wrapper-2 {
-  display: grid;
-  margin: 1rem 3%;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-gap: 0rem;
-}
-.wrapper-2-title {
-  margin: 0px;
-  font-family: "Antonio", sans-serif;
-  font-size: 28px;
-}
-.wrapper-2-title a {
-  text-decoration: none;
-  color: black;
-}
-.wrapper-2-title :hover {
-  color: #949494;
-}
-
-.sub-headlines-2 {
-  display: grid;
-  grid-template-rows: auto;
-  padding: 1rem;
   background-color: #e0e0e0;
 }
-.subhead-2 {
-  margin: 0.5rem;
-}
 
-/*FOOTER -----------------------*/
+/*FOOTER -------------------------------------------------------*/
 
 .footer {
+  /* Adding basic styling to the whole footer */
   background-color: #eeeeee;
   margin: 6rem 0 0 0;
   padding: 3rem 0;
 }
 .container {
-  max-width: 1170px;
+  /* Providing a maximum width and margin to the container */
+  max-width: 1440px;
   margin: auto;
 }
 .footerRow {
+  /* Using flexbox to give the footer rows a layout */
   display: flex;
   flex-wrap: wrap;
 }
@@ -411,10 +302,12 @@ WRAPPER-1 CONTENT CSS                                                           
   padding: 0 15px;
 }
 ul {
+  /* Removing all styling from the list */
   list-style: none;
 }
 
 .footerColumn h4 {
+  /* Giving styles to the footer headings */
   font-size: 20px;
   color: #000000;
   text-transform: capitalize;
@@ -424,6 +317,7 @@ ul {
   position: relative;
 }
 .footerColumn h4::before {
+  /* Giving better looks to the footer headings */
   content: "";
   position: absolute;
   left: 0;
@@ -437,6 +331,8 @@ ul {
   margin-bottom: 10px;
 }
 .footerColumn ul li a {
+  /* Providing styles to footer links */
+  /* Adding animation */
   font-size: 18px;
   text-transform: capitalize;
   color: #141414;
@@ -448,25 +344,30 @@ ul {
   transition: all 0.3s ease;
 }
 .footerColumn ul li a:hover {
+  /* Adding hover effect to footer links */
   color: #000000;
   padding-left: 8px;
 }
 
 /*
 #####################################################################
-RESPONSIVE CSS: TABLET MODE                                         #
-# Used to change CSS for smaller screen sizes (below 800px)         #
-# Contains CSS change for navigation bar                            #
-# Contains CSS change for main content (wrapper-1 and wrapper-2)    #
-# Contains CSS change for footer                                    #
+RESPONSIVE CSS: TABLET MODE
+# Used to change CSS for smaller screen sizes (below 1000px)
+# Contains CSS change for navigation bar
+# Contains CSS change for main content (wrapper-1 and wrapper-2)
+# Contains CSS change for footer
 #####################################################################
 */
-@media (max-width: 800px) {
-  /*NAVIGATION BAR CSS ------------------------------------------------*/
+@media (max-width: 1000px) {
+  /*NAVIGATION BAR CSS ------------------------------------*/
   .toggle-button {
+    /* Using flexbox for toggle button */
+    /* Starts to display the toggle button that was hidden */
     display: flex;
   }
+  /* The code below is used to show links when the toggle button is pressed */
   .navigation-bar-links {
+    /* Turning off the navbar links */
     display: none;
     width: 100%;
   }
@@ -482,30 +383,15 @@ RESPONSIVE CSS: TABLET MODE                                         #
     text-align: center;
   }
   .navigation-bar-links li a {
-    padding: 0.5rem 1rem;
+    padding: 1rem;
   }
   .navigation-bar-links.active {
     display: flex;
   }
 
-  section {
-    padding: 50px 30px;
-  }
-
-  .home {
-    display: block;
-  }
-
-  .image {
-    width: 100%;
-  }
-
-  .info {
-    width: 100%;
-    margin-top: 15px;
-  }
-
-  /*WRAPPER-1 CSS ------------------------------------------------*/
+  /*WRAPPER-1 CSS ----------------------------------------*/
+  /* Changing the font size of all text to make them fit in the new screen size */
+  /* Adjusting the gaps between grids to fit in the screen size */
   .headline-author {
     font-size: 16px;
   }
@@ -538,16 +424,7 @@ RESPONSIVE CSS: TABLET MODE                                         #
     font-size: 16px;
   }
 
-  /*WRAPPER-2 CSS ------------------------------------------------*/
-  .wrapper-2 {
-    display: grid;
-    margin: 1rem 3%;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-gap: 0rem;
-  }
-
-  /*FOOTER CSS -------------------------------------*/
+  /*FOOTER CSS -------------------------------------------*/
   .footerColumn {
     width: 50%;
     margin-bottom: 30px;
@@ -556,13 +433,15 @@ RESPONSIVE CSS: TABLET MODE                                         #
 
 /*
 ##########################################################################
-RESPONSIVE CSS: SMARTPHONE MODE                                          #
-# Used to change CSS for smaller screen sizes (below 500px)              #                           #
-# Contains CSS change for main content only (wrapper-1 and wrapper-2)    #                                   #
+RESPONSIVE CSS: SMARTPHONE MODE
+# Used to change CSS for smaller screen sizes (below 700px)
+# Contains CSS change for main content (wrapper-1 and wrapper-2)
 ##########################################################################
 */
-@media (max-width: 500px) {
-  /*WRAPPER-1 CSS ------------------------------------------------*/
+@media (max-width: 700px) {
+  /*WRAPPER-1 CSS ----------------------------------------*/
+  /* Changing the entire grid layout making everything come in one column */
+  /* Changing font sizes for the new layout */
   .wrapper-1 {
     grid-template-columns: auto;
   }
@@ -598,16 +477,7 @@ RESPONSIVE CSS: SMARTPHONE MODE                                          #
     font-size: 16px;
   }
 
-  /*WRAPPER-2 CSS ------------------------------------------------*/
-  .wrapper-2 {
-    display: grid;
-    margin: 1rem 3%;
-    grid-template-columns: auto;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-gap: 0rem;
-  }
-
-  /*FOOTER CSS -------------------------------------*/
+  /*FOOTER CSS -------------------------------------------*/
   .footerColumn {
     width: 100%;
   }

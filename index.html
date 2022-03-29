@@ -21,7 +21,8 @@
       href="https://fonts.googleapis.com/css2?family=Antonio:wght@500&family=Poppins:wght@500&display=swap"
       rel="stylesheet"
     />
-    <link href="css and js/StyleSheet.css" rel="stylesheet" media="screen" />
+    <link href="css and js/style.css" rel="stylesheet" media="screen" />
+    <link href="css and js/addedFeatures.css" rel="stylesheet" media="screen" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
@@ -30,6 +31,7 @@
   </head>
   <body>
     <!--Popup screen asking for newsletter subscription-->
+    <!-- Only asks for Subscription one time -->
     <div class="popup-screen">
       <div class="popup-box">
         <i class="fas fa-times close-btn"></i>
@@ -43,12 +45,12 @@
     </div>
 
     <!--
-            #########################################################################
-            SUMMARY OF THE HEADER BELOW: A navigation bar                           #
-            # navigation-bar: used to create a navigation bar for the normal view   #
-            # toggle-button: used for smaller sized displays, uses javascript       #
-            # navigation-bar-links: main links to other pages                       #
-            #########################################################################
+    #########################################################################
+    SUMMARY OF THE HEADER BELOW: A navigation bar
+    # navigation-bar: used to create a navigation bar for the normal view
+    # toggle-button: used for smaller sized displays, uses javascript
+    # navigation-bar-links: main links to other pages
+    #########################################################################
     -->
     <header>
       <nav class="navigation-bar">
@@ -83,20 +85,22 @@
     <hr class="divider" />
 
     <!--
-            ###################################################################################
-            SUMMARY OF THE MAIN CODE: The main content of the page                            #
-            # main: Everything except the navigation bar and the footer                       #
-            # wrapper-1: the first half of the articles (total 2 parts above and below)       #
-            # main-articles: part of the wrapper-1, left articles                             #
-            # latest-articles-all: part of the wrapper-1, the right articles                  #
-            # wrapper-2: below wrapper-1, a taste of all the sub topics like WebDev, AI, etc  #
-            ###################################################################################
+    ###################################################################################
+    SUMMARY OF THE MAIN CODE: The main content of the page
+    # main: Everything except the navigation bar and the footer
+    # wrapper-1: the first half of the articles (total 2 parts above and below)
+    # main-articles: part of the wrapper-1, left articles
+    # latest-articles-all: part of the wrapper-1, the right articles
+    # wrapper-2: below wrapper-1, a taste of all the sub topics like WebDev, AI, etc
+    ###################################################################################
     -->
     <div class="main">
       <div class="wrapper-1">
         <h2 class="wrapper-1-title"><a href="index.html">Home</a></h2>
         <br />
+        <!-- Articles on the left -->
         <div class="main-articles">
+          <!-- Headline article on the left -->
           <article class="headline">
             <div class="headline-image">
               <a href=""
@@ -118,7 +122,9 @@
             </div>
           </article>
 
+          <!-- Smaller articles on the left below headline -->
           <div class="sub-headlines">
+            <!-- First article -->
             <article class="subhead">
               <div class="subhead-img">
                 <a href="#"
@@ -140,6 +146,7 @@
               </div>
             </article>
 
+            <!-- Second article -->
             <article class="subhead">
               <div class="subhead-img">
                 <a href="#"
@@ -160,6 +167,7 @@
               </div>
             </article>
 
+            <!-- Third article -->
             <article class="subhead">
               <div class="subhead-img">
                 <a href="#"
@@ -181,6 +189,7 @@
               </div>
             </article>
 
+            <!-- Fourth article -->
             <article class="subhead">
               <div class="subhead-img">
                 <a href="#"
@@ -204,8 +213,10 @@
           </div>
         </div>
 
+        <!-- Articles on the right -->
         <div class="latest-articles-all">
           <h4 class="latest-articles-all-title">Latest articles</h4>
+          <!-- First article -->
           <article class="latest-article">
             <div class="latest-article-img">
               <a href="#"
@@ -231,6 +242,7 @@
             </div>
           </article>
 
+          <!-- Second article -->
           <article class="latest-article">
             <div class="latest-article-img">
               <a href="#"
@@ -255,6 +267,7 @@
             </div>
           </article>
 
+          <!-- Third article -->
           <article class="latest-article">
             <div class="latest-article-img">
               <a href="#"
@@ -279,6 +292,7 @@
             </div>
           </article>
 
+          <!-- Fourth article -->
           <article class="latest-article">
             <div class="latest-article-img">
               <a href="#"
@@ -304,6 +318,7 @@
             </div>
           </article>
 
+          <!-- Fifth article -->
           <article class="latest-article">
             <div class="latest-article-img">
               <a href="#"
@@ -331,18 +346,30 @@
       <hr class="divider" />
     </div>
 
+    <!--
+    ###########################################################################
+    SUMMARY OF THE FOOTER CODE: The footer of the page
+    # This is inspired by a video from the youtube channel The WebShala.
+    # to know more, go to the report page.
+    # Contains 4 columns: The Prog Mag, Contact, Articles, Follow Us
+    # Articles contains secondary links to other main pages: Web dev, ai, etc.
+    ###########################################################################
+    -->
     <footer class="footer">
       <div class="container">
         <div class="footerRow">
           <div class="footerColumn">
+            <!-- First column of the footer -->
             <h4>The Prog Mag</h4>
             <ul>
+              <li><a href="report.html">Report</a></li>
               <li><a href="#">About Us</a></li>
               <li><a href="#">Our Services</a></li>
               <li><a href="#">Privacy Policy</a></li>
             </ul>
           </div>
           <div class="footerColumn">
+            <!-- Second column of the footer -->
             <h4>Contact</h4>
             <ul>
               <li><a href="#">Phone No.</a></li>
@@ -351,6 +378,7 @@
             </ul>
           </div>
           <div class="footerColumn">
+            <!-- Third column of the footer -->
             <h4>Articles</h4>
             <ul>
               <li><a href="index.html">Home</a></li>
@@ -361,6 +389,7 @@
             </ul>
           </div>
           <div class="footerColumn">
+            <!-- Fourth column of the footer -->
             <h4>Follow Us</h4>
             <ul>
               <li><a href="#">Twitter</a></li>
@@ -373,8 +402,10 @@
       </div>
     </footer>
 
+    <!-- Back to top button on bottom right -->
     <a id="backtotop"><i class="fa fa-chevron-up"></i></a>
 
+    <!-- Links to JavaScript files -->
     <script src="css and js/script.js" defer></script>
     <script src="css and js/jquery.js"></script>
   </body>

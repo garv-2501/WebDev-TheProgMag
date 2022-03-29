@@ -47,7 +47,7 @@ jQuery("#backtotop").click(function () {
     {
       scrollTop: 0,
     },
-    600
+    200
   );
 });
 
